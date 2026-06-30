@@ -17,7 +17,7 @@ export default defineConfig({
         background_color: '#F6F7F5',
         icons: [
           {
-            src: 'icon.svg',
+            src: 'expense_tracker_app_icon.svg',
             sizes: 'any',
             type: 'image/svg+xml',
             purpose: 'any maskable',
