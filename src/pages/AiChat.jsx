@@ -114,6 +114,14 @@ function AiChat() {
           ))
         )}
       </div>
+      {loading && (
+        <div className="bg-white border border-stone rounded-lg p-4 mb-4 flex items-center gap-3">
+          <div className="w-4 h-4 rounded-full bg-amber animate-pulse flex-shrink-0"></div>
+          <p className="text-ink/60 text-sm">
+            Analysing your spending data — this may take a moment...
+          </p>
+        </div>
+      )}
 
       {error && (
         <div className="bg-red-50 text-red-700 rounded-md px-3 py-2 mb-4 text-sm">
@@ -133,6 +141,7 @@ function AiChat() {
           />
         </div>
 
+
         <button
           type="submit"
           disabled={loading}
@@ -140,7 +149,7 @@ function AiChat() {
             loading ? "bg-gray-400 cursor-not-allowed" : "bg-ink hover:bg-amber"
           }`}
         >
-          {loading ? "Thinking..." : "Ask AI"}
+          {loading ? "Analysing your expenses..." : "Ask AI"}
         </button>
       </form>
     </div>
